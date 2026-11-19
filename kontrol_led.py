@@ -11,9 +11,9 @@ print(f"Terhubung ke {PORT} @ {BAUD}. Tekan SPASI untuk toggle LED (Ctrl+C kelua
 
 try:
     while True:
-        if keyboard.is_pressed("space"):
+        event = keyboard.read_event()
+        if event.event_type == keyboard.KEY_DOWN and event.name == "space":
             ser.write(b" ")
-            time.sleep(0.05)
 
         if ser.in_waiting > 0:
             balasan = ser.readline().decode(errors="ignore").strip()

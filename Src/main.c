@@ -102,7 +102,7 @@ int main(void)
   
 #include <string.h>
 
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+  // HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   while (1)
   {
     /* USER CODE END WHILE */
@@ -113,10 +113,10 @@ int main(void)
     // HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, RESET);
     // HAL_Delay(2000);
 
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 200);
-    HAL_Delay(2000);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
-    HAL_Delay(2000);
+    // __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 200);
+    // HAL_Delay(2000);
+    // __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 800);
+    // HAL_Delay(2000);
 
     // char pesan[] = "Halo ini Bimo\r\n";
     // HAL_UART_Transmit(&huart1, (uint8_t *)pesan, strlen(pesan), HAL_MAX_DELAY);
